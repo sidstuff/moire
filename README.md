@@ -29,9 +29,9 @@ Let's test it out by generating some colors.
 16 ⏐ for i in imgs: Image.fromarray(np.array(i[1]),'RGB').save(i[0])
 ```
 <div align="center">
-<img src="https://raw.githubusercontent.com/sidstuff/moire/master/hsl.png"><br>hsl.png<br><br>
-<img src="https://raw.githubusercontent.com/sidstuff/moire/master/hsv.png"><br>hsv.png<br><br>
-<img src="https://raw.githubusercontent.com/sidstuff/moire/master/hs.png"><br>hs.png<br><br>
+<img src="hsl.png"><br>hsl.png<br><br>
+<img src="hsv.png"><br>hsv.png<br><br>
+<img src="hs.png"><br>hs.png<br><br>
 </div>
 
 The `colorsys` functions use RGB values in the unit interval, `func()` converts them into 8 bit unsigned integers. For `i` in `imgs`, `i[0]` is the filename and `i[1]` will become the image. Every $k^\text{th}$ iteration of the outermost loop, the $k^\text{th}$ rows of the 3 images are listed in `rows`, then appended to said images. Finally, we save the images.
@@ -107,9 +107,9 @@ imgs[0].save('moire.gif', save_all=True, append_images=imgs[1:], optimize=False,
 ```
 <div align="center"><img src="https://github.com/sidstuff/moire/assets/160637304/0c1828a4-3b05-4cbd-bc08-081736b7e3f6" width="50%"><br><a href="https://github.com/sidstuff/moire/assets/160637304/0c1828a4-3b05-4cbd-bc08-081736b7e3f6">moire.gif (bad)</a></div><br>
 
-Due to shifting the rows first, then the columns, there are vertical striations, and the circular patterns all stretch horizontally. To fix this, let's shift the rows, then the columns, then the rows again, and then the columns again. Replace the `20` in `f1` and `f2` with `10` and enclose the middle block from before in `for _ in range(2)`. The final code is <a href="https://github.com/sidstuff/moire/blob/master/moire.py">here</a>. And here's our final result!
+Due to shifting the rows first, then the columns, there are vertical striations, and the circular patterns all stretch horizontally. To fix this, let's shift the rows, then the columns, then the rows again, and then the columns again. Replace the `20` in `f1` and `f2` with `10` and enclose the middle block from before in `for _ in range(2)`. The final code is <a href="moire.py">here</a>. And here's our final result!
 
-<div align="center"><img src="https://raw.githubusercontent.com/sidstuff/moire/master/moire.gif" width="50%"><br><a href="https://raw.githubusercontent.com/sidstuff/moire/master/moire.gif">moire.gif</a></div><br>
+<div align="center"><img src="moire.gif" width="50%"><br><a href="moire.gif">moire.gif</a></div><br>
 
 > [!Note]
 > For a much more elaborate project involving 3D animation, check out <a href="https://github.com/sidstuff/orbital">sidstuff/orbital</a>
