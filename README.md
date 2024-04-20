@@ -105,11 +105,11 @@ for t in np.linspace(0,2*np.pi,75,endpoint=False):    # every timestep
 
 imgs[0].save('moire.gif', save_all=True, append_images=imgs[1:], optimize=False, duration=120, loop=0)    # Save imgs as GIF
 ```
-<div align="center"><img src="https://github.com/sidstuff/moire/assets/160637304/0c1828a4-3b05-4cbd-bc08-081736b7e3f6" width="50%"></div><br>
+<div align="center"><img src="https://github.com/sidstuff/moire/assets/160637304/0c1828a4-3b05-4cbd-bc08-081736b7e3f6" width="50%"><br><a href="https://github.com/sidstuff/moire/assets/160637304/0c1828a4-3b05-4cbd-bc08-081736b7e3f6">moire.gif (bad)</a></div><br>
 
 Due to shifting the rows first, then the columns, there are vertical striations, and the circular patterns all stretch horizontally. To fix this, let's shift the rows, then the columns, then the rows again, and then the columns again. Replace the `20` in `f1` and `f2` with `10` and enclose the middle block from before in `for _ in range(2)`. The final code is <a href="https://github.com/sidstuff/moire/blob/master/moire.py">here</a>. And here's our final result!
 
-<div align="center"><img src="https://raw.githubusercontent.com/sidstuff/moire/master/moire.gif" width="50%"></div><br>
+<div align="center"><img src="https://raw.githubusercontent.com/sidstuff/moire/master/moire.gif" width="50%"><br><a href="https://raw.githubusercontent.com/sidstuff/moire/master/moire.gif">moire.gif</a></div><br>
 
 > [!Note]
 > For a much more elaborate project involving 3D animation, check out <a href="https://github.com/sidstuff/orbital">sidstuff/orbital</a>
